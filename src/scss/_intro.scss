@@ -1,0 +1,70 @@
+.c-intro{
+  margin-top: -1rem;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  @media ($desktop){
+    position: relative;
+  }
+  &__content{
+    text-align: center;
+    @media ($desktop){
+      text-align: left;
+      grid-row: 1;
+    }
+  }
+  &__image{
+    @media ($desktop){
+      grid-column: 2/2;
+      position: absolute;
+      top: -8rem;
+      margin: 0 auto;
+      width: 110%;
+      right: -5rem;
+    }
+    @media ($large-desktop){
+      right: -13rem;
+      width: 120%;
+    }
+  }
+  &__description{
+    line-height: 1.7;
+    color: $Grayish-Blue;
+    margin-bottom: 2rem;
+    font-size: .9rem;
+    @media ($tablet){
+      margin: 2rem auto;
+      font-size: 1rem;
+      width: 70%;
+    }
+    @media ($desktop){
+      width: 85%;
+      margin: 1.5rem 0 2rem 0;
+    }
+  }
+  @media ($desktop){
+    gap: 5rem;
+    margin-top: 9rem;
+    grid-template-columns: repeat(2,1fr);
+  }
+  &::before{
+    content: '';
+    background-image: url('../images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: 0 top;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vmax;
+    background-size: 100%;
+    z-index: -1;
+    @media ($desktop){
+      width: 80%;
+      right: -50rem;
+      top: -15rem;
+      background-image: url('../images/bg-intro-desktop.svg');
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.c-footer{
+  background-color: $Dark-Blue;
+  padding: 3rem 0 2rem 0;
+  &__copy,&__cta,&__brand,&__lists{
+    grid-column: 1/3;
+  }
+  &__content{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    row-gap: 2rem;
+    @media ($desktop){
+      text-align: left;
+      column-gap: 8rem;
+      grid-template-columns: repeat(3,1fr) 2fr;
+      row-gap: 0;
+      justify-items: start;
+    }
+  }
+  &__brand{  
+    @media ($desktop){
+      grid-row: 1 ;
+      grid-column: 1/1;
+    }
+  }
+  &__lists{
+    @media ($tablet){
+      display: grid;
+      column-gap: 8rem;
+      grid-template-columns: repeat(2,1fr);
+    }
+    @media ($desktop){
+      grid-column: 2/4;
+      grid-row: 1/3;
+    }
+  }
+  &__cta{
+    @media ($desktop){
+      grid-row: 1;
+      grid-column: 4/4;
+      width: 100%;
+      text-align: right;
+    }
+  }
+  &__copy{
+    color: $Grayish-Blue;
+    font-size: .8rem;
+    @media ($desktop){
+      grid-column: 4/4;
+      grid-row: 2/2;
+      width: 100%;
+      text-align: right;
+    }
+  }
+}

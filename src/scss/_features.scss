@@ -1,0 +1,36 @@
+.c-features{
+  display: grid;
+  gap: 3rem;
+  margin-top: 4rem;
+  @media ($tablet){
+    grid-template-columns: repeat(2,1fr);
+  }
+  @media ($desktop){
+    gap: 4rem;
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+.c-feature{
+  display: grid;
+  justify-items: center;
+  &__icon{
+    margin-bottom: 1.5rem;
+  }
+  &__title{
+    font-weight: 400;
+    margin: 0;
+    font-size: 1.25rem;
+    color: $Dark-Blue;
+  }
+  &__description{
+    font-size: .9rem;
+    line-height: 1.8;
+    color: $Grayish-Blue;
+    @media ($desktop){
+      font-size: .8rem;
+    }
+  }
+  @media ($desktop){
+    justify-items: start;
+  }
+}

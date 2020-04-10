@@ -1,0 +1,22 @@
+header
+  .fixed#main-navbar
+    .o-container.main-navbar
+      .brand
+        a(href="index.html").brand__logo
+          img(src="images/logo.svg", alt="logo")
+      #burger.icon__burger
+        span
+        span
+        span
+      nav.menu-navbar
+        ul.c-menu.c-menu--main
+          li.c-menu__item: a(href="#!").c-menu__link Home
+          li.c-menu__item: a(href="#!").c-menu__link About
+          li.c-menu__item: a(href="#!").c-menu__link Contact
+          li.c-menu__item: a(href="#!").c-menu__link Blog
+          li.c-menu__item: a(href="#!").c-menu__link Careers
+      nav.menu-cta
+        ul.c-menu.c-menu--cta
+          li.c-menu__item: a(href="#!").c-btn.c-btn--main Request Invite
+
+  include ../block/intro

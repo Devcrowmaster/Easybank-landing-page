@@ -1,0 +1,28 @@
+.c-choose{
+  padding-top: 4rem;
+  background-color: $Light-Grayish-Blue;
+  text-align: center;
+  padding-bottom: 3rem;
+  &__content{
+    display: grid;
+    justify-items: center;
+    @media ($desktop){
+      justify-items: start;
+    }
+  }
+  &__description{
+    color: $Grayish-Blue;
+    font-size: .9rem;
+    line-height: 1.7;
+    @media ($tablet){
+      width: 80%;
+    }
+    @media ($desktop){
+      width: 50%;
+    }
+  }
+  @media ($desktop){
+    text-align: left;
+    padding-top: 8rem;
+  }
+}
